@@ -1,0 +1,22 @@
+.page-footer__title {
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+}
+
+.social-networks__link--company {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $white-color;
+
+  transition: background-color $transition-type;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}

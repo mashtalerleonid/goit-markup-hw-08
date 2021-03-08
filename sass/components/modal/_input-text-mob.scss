@@ -1,0 +1,55 @@
+.form-recall__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.form-recall__label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-recall__input {
+  margin: 0;
+  padding: 11px 11px 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 14px;
+  color: $title-text-color;
+
+  transition: border-color $transition-type;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+
+  &:not(:placeholder-shown) {
+    cursor: text;
+    border-color: $accent-color;
+  }
+}
+
+.form-recall__icon {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  pointer-events: none;
+  fill: $title-text-color;
+
+  transition: fill $transition-type;
+
+  .form-recall__input:hover + &,
+  .form-recall__input:focus + &,
+  .form-recall__input:not(:placeholder-shown) + & {
+    fill: $accent-color;
+  }
+}

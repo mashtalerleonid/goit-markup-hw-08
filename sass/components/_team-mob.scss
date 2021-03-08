@@ -1,0 +1,90 @@
+.team__section {
+  background-color: $secondary-bg-color;
+}
+
+.members {
+  @extend %list;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.members__item:not(:last-child) {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-bottom: 30px;
+  }
+}
+
+.members__item {
+  overflow: hidden;
+  border-radius: 0px 0px 4px 4px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+.members__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: $white-color;
+}
+
+.members__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.members__profession {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.social-networks {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.social-networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-networks__link--personal {
+  color: $social-link-color;
+
+  transition: color $transition-type, background-color $transition-type;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+  }
+}
+
+.social-networks__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

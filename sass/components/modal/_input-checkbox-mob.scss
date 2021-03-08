@@ -1,0 +1,36 @@
+.form-recall__field-checkbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.form-recall__label-checkbox {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+
+    transition: border-color $transition-type, background-color $transition-type;
+  }
+
+  .form-recall__input-checkbox:checked + &::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+
+    background-image: url('../images/icons/icon-check.svg');
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.form-recall__aggree {
+  color: $accent-color;
+  margin-left: 2px;
+}
