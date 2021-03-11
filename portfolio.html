@@ -24,43 +24,91 @@
         <a class="logo page-header__logo" href="./index.html">
           Web<span class="page-header__subtext">Studio</span>
         </a>
-        <nav class="page-header__nav">
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html"> Студия </a>
-            </li>
-            <li class="site-nav__item">
+
+        <div class="page-header__menu" id="menu-container" data-menu>
+          <nav class="page-header__nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  class="site-nav__link site-nav__link--current"
+                  href="./index.html"
+                >
+                  Студия
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">
+                  Портфолио
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#contact">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts">
+            <li class="contacts__item">
               <a
-                class="site-nav__link site-nav__link--current"
-                href="./portfolio.html"
+                class="contacts__link contacts__mail"
+                href="mailto:info@devstudio.com"
               >
-                Портфолио
+                <svg class="contacts__icon" width="14" height="10">
+                  <use href="./images/icons/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
               </a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#contact">Контакты</a>
+            <li class="contacts__item">
+              <a
+                class="contacts__link contacts__phone"
+                href="tel:+380961111111"
+              >
+                <svg class="contacts__icon" width="10" height="14">
+                  <use href="./images/icons/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="menu__networks">
+            <li class="networks__item">
+              <a class="networks__link" href="#">Instagram</a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href="#">Twitter</a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href="#">Facebook</a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="page-header__menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="24"
+            height="24"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="menu-btn__icon-menu"
+              href="./images/icons/sprite.svg#icon-menu"
+            ></use>
+            <use
+              class="menu-btn__icon-close"
+              href="./images/icons/sprite.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -409,5 +457,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
