@@ -1,0 +1,118 @@
+.mobile-menu__container {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $mobile;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: calc(#{$mobile} - 1px)) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.page-header__menu {
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $white-color;
+    transform: translateY(-100%);
+
+    transition: transform $transition-type;
+
+    &.menu--is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.page-header__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  background: $white-color;
+  color: $black-text-color;
+
+  &.menu--is-open .menu-btn__icon-close {
+    display: block;
+  }
+
+  &.menu--is-open .menu-btn__icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-btn__icon-close {
+  display: none;
+}
+
+.menu__networks {
+  @extend %list;
+
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.networks__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 0;
+      width: 1px;
+      height: 22px;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+  }
+}
+
+.networks__link {
+  @extend %link;
+
+  color: $accent-color;
+}

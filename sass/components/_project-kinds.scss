@@ -1,11 +1,20 @@
 .project-kind {
   @extend %list;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-top: -15px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .project-kind__item {
+  margin-top: 15px;
   &:not(:last-child) {
     margin-right: 8px;
   }
