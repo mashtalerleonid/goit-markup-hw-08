@@ -26,18 +26,16 @@
         </a>
 
         <div class="page-header__menu" id="menu-container" data-menu>
-          <nav class="page-header__nav">
+          <nav class="page-header__nav mobile-menu__container">
             <ul class="site-nav">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./index.html"> Студия </a>
+              </li>
               <li class="site-nav__item">
                 <a
                   class="site-nav__link site-nav__link--current"
-                  href="./index.html"
+                  href="./portfolio.html"
                 >
-                  Студия
-                </a>
-              </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link" href="./portfolio.html">
                   Портфолио
                 </a>
               </li>
@@ -47,45 +45,47 @@
             </ul>
           </nav>
 
-          <ul class="contacts">
-            <li class="contacts__item">
-              <a
-                class="contacts__link contacts__mail"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="contacts__icon" width="14" height="10">
-                  <use href="./images/icons/sprite.svg#envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a
-                class="contacts__link contacts__phone"
-                href="tel:+380961111111"
-              >
-                <svg class="contacts__icon" width="10" height="14">
-                  <use href="./images/icons/sprite.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
+          <div class="mobile-menu__container">
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts__icon" width="14" height="10">
+                    <use href="./images/icons/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__phone"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contacts__icon" width="10" height="14">
+                    <use href="./images/icons/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
 
-          <ul class="menu__networks">
-            <li class="networks__item">
-              <a class="networks__link" href="#">Instagram</a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link" href="#">Twitter</a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link" href="#">Facebook</a>
-            </li>
-            <li class="networks__item">
-              <a class="networks__link" href="#">LinkedIn</a>
-            </li>
-          </ul>
+            <ul class="menu__networks">
+              <li class="networks__item">
+                <a class="networks__link" href="#">Instagram</a>
+              </li>
+              <li class="networks__item">
+                <a class="networks__link" href="#">Twitter</a>
+              </li>
+              <li class="networks__item">
+                <a class="networks__link" href="#">Facebook</a>
+              </li>
+              <li class="networks__item">
+                <a class="networks__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <button
           class="page-header__menu-btn"
@@ -146,9 +146,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-1.jpg"
+                    src="./images/projects/project-1-mobile.jpg"
                     alt="Технокряк"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-1-mobile.jpg     450w,
+                      ./images/projects/project-1-mobile@2x.jpg  900w,
+                      ./images/projects/project-1-tablet.jpg     354w,
+                      ./images/projects/project-1-tablet@2x.jpg  708w,
+                      ./images/projects/project-1-desktop.jpg    370w,
+                      ./images/projects/project-1-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -169,9 +177,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-2.jpg"
+                    src="./images/projects/project-2-mobile.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-2-mobile.jpg     450w,
+                      ./images/projects/project-2-mobile@2x.jpg  900w,
+                      ./images/projects/project-2-tablet.jpg     354w,
+                      ./images/projects/project-2-tablet@2x.jpg  708w,
+                      ./images/projects/project-2-desktop.jpg    370w,
+                      ./images/projects/project-2-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -194,9 +210,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-3.jpg"
+                    src="./images/projects/project-3-mobile.jpg"
                     alt="Ресторан Seafood"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-3-mobile.jpg     450w,
+                      ./images/projects/project-3-mobile@2x.jpg  900w,
+                      ./images/projects/project-3-tablet.jpg     354w,
+                      ./images/projects/project-3-tablet@2x.jpg  708w,
+                      ./images/projects/project-3-desktop.jpg    370w,
+                      ./images/projects/project-3-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -217,9 +241,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-4.jpg"
+                    src="./images/projects/project-4-mobile.jpg"
                     alt="Проект Prime"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-4-mobile.jpg     450w,
+                      ./images/projects/project-4-mobile@2x.jpg  900w,
+                      ./images/projects/project-4-tablet.jpg     354w,
+                      ./images/projects/project-4-tablet@2x.jpg  708w,
+                      ./images/projects/project-4-desktop.jpg    370w,
+                      ./images/projects/project-4-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -240,9 +272,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-5.jpg"
+                    src="./images/projects/project-5-mobile.jpg"
                     alt="Проект Boxes"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-5-mobile.jpg     450w,
+                      ./images/projects/project-5-mobile@2x.jpg  900w,
+                      ./images/projects/project-5-tablet.jpg     354w,
+                      ./images/projects/project-5-tablet@2x.jpg  708w,
+                      ./images/projects/project-5-desktop.jpg    370w,
+                      ./images/projects/project-5-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -263,9 +303,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-6.jpg"
+                    src="./images/projects/project-6-mobile.jpg"
                     alt="Inspiration has no Borders"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-6-mobile.jpg     450w,
+                      ./images/projects/project-6-mobile@2x.jpg  900w,
+                      ./images/projects/project-6-tablet.jpg     354w,
+                      ./images/projects/project-6-tablet@2x.jpg  708w,
+                      ./images/projects/project-6-desktop.jpg    370w,
+                      ./images/projects/project-6-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -288,9 +336,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-7.jpg"
+                    src="./images/projects/project-7-mobile.jpg"
                     alt="Издание Limited Edition"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-7-mobile.jpg     450w,
+                      ./images/projects/project-7-mobile@2x.jpg  900w,
+                      ./images/projects/project-7-tablet.jpg     354w,
+                      ./images/projects/project-7-tablet@2x.jpg  708w,
+                      ./images/projects/project-7-desktop.jpg    370w,
+                      ./images/projects/project-7-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -313,9 +369,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-8.jpg"
+                    src="./images/projects/project-8-mobile.jpg"
                     alt="Проект LAB"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-8-mobile.jpg     450w,
+                      ./images/projects/project-8-mobile@2x.jpg  900w,
+                      ./images/projects/project-8-tablet.jpg     354w,
+                      ./images/projects/project-8-tablet@2x.jpg  708w,
+                      ./images/projects/project-8-desktop.jpg    370w,
+                      ./images/projects/project-8-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -336,9 +400,17 @@
               <a href="#" class="project-example__link">
                 <div class="thumb">
                   <img
-                    src="./images/projects/project-9.jpg"
+                    src="./images/projects/project-9-mobile.jpg"
                     alt="Growing Business"
-                    width="370"
+                    srcset="
+                      ./images/projects/project-9-mobile.jpg     450w,
+                      ./images/projects/project-9-mobile@2x.jpg  900w,
+                      ./images/projects/project-9-tablet.jpg     354w,
+                      ./images/projects/project-9-tablet@2x.jpg  708w,
+                      ./images/projects/project-9-desktop.jpg    370w,
+                      ./images/projects/project-9-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project-example__overlay">
                     <p>
@@ -362,76 +434,78 @@
 
     <!-- footer -->
     <footer class="page-footer">
-      <div class="container footer__container">
-        <div class="footer__logo-address" id="contact">
-          <a class="logo footer__logo" href="./index.html">
-            Web<span class="footer__subtext">Studio</span>
-          </a>
-          <address>
-            <ul class="address">
-              <li class="address__item">
-                <a class="address__link address__link--white" href="#">
-                  г. Киев, пр-т Леси Украинки, 26
-                </a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com">
-                  info@example.com
-                </a>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
+      <div class="container page-footer__container">
+        <div class="logo-address-connect__container">
+          <div class="page-footer__logo-address" id="contact">
+            <a class="logo page-footer__logo" href="./index.html">
+              Web<span class="page-footer__subtext">Studio</span>
+            </a>
+            <address>
+              <ul class="address">
+                <li class="address__item">
+                  <a class="address__link address__link--white" href="#">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com">
+                    info@example.com
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="connect">
+            <p class="page-footer__title">Присоединяйтесь</p>
+            <ul class="social-networks">
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link--company"
+                  href="#"
                 >
+                  <svg class="social-networks__icon">
+                    <use href="./images/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link--company"
+                  href="#"
+                >
+                  <svg class="social-networks__icon">
+                    <use href="./images/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link--company"
+                  href="#"
+                >
+                  <svg class="social-networks__icon">
+                    <use href="./images/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link--company"
+                  href="#"
+                >
+                  <svg class="social-networks__icon">
+                    <use href="./images/icons/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="connect">
-          <p class="page-footer__title">Присоединяйтесь</p>
-          <ul class="social-networks">
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link--company"
-                href="#"
-              >
-                <svg class="social-networks__icon">
-                  <use href="./images/icons/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link--company"
-                href="#"
-              >
-                <svg class="social-networks__icon">
-                  <use href="./images/icons/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link--company"
-                href="#"
-              >
-                <svg class="social-networks__icon">
-                  <use href="./images/icons/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link--company"
-                href="#"
-              >
-                <svg class="social-networks__icon">
-                  <use href="./images/icons/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="subscribe">
@@ -446,7 +520,7 @@
                 />
                 <span class="form-subscribe__label"> E-mail</span>
               </label>
-              <button class="button" type="submit">
+              <button class="button button--subscribe" type="submit">
                 Подписаться
                 <svg class="form-subscribe__icon" width="24" height="24">
                   <use href="./images/icons/sprite.svg#icon-send"></use>
