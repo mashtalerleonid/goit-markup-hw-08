@@ -44,6 +44,10 @@
     background-size: contain;
     background-origin: border-box;
   }
+
+  &:focus + .form-recall__label-checkbox {
+    color: $accent-color;
+  }
 }
 
 .form-recall__aggree {

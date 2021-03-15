@@ -284,7 +284,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .menu__networks {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -1671,6 +1671,10 @@ img {
   background-image: url("../images/icons/icon-check.svg");
   background-size: contain;
   background-origin: border-box;
+}
+
+.form-recall__input-checkbox:focus + .form-recall__label-checkbox {
+  color: #2196f3;
 }
 
 .form-recall__aggree {
