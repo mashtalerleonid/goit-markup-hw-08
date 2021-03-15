@@ -277,9 +277,15 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 480px) {
+  .menu__networks {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -425,34 +431,21 @@ img {
   color: #757575;
   letter-spacing: 0.02em;
   font-weight: 500;
-}
-
-@media screen and (max-width: calc(768px - 1px)) {
-  .contacts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    margin-bottom: 64px;
-  }
-  .contacts .contacts__mail {
-    font-size: 24px;
-    line-height: 1.17;
-  }
-  .contacts .contacts__phone {
-    font-size: 34px;
-    line-height: 1.18;
-  }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-bottom: 64px;
+  line-height: 1.17;
 }
 
 @media screen and (min-width: 768px) {
   .contacts {
+    margin-bottom: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-size: 12px;
-    line-height: 1.17;
   }
 }
 
@@ -462,19 +455,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    font-size: 14px;
-    line-height: 1.14;
-  }
-  .contacts .contacts__mail .contacts__icon {
-    width: 16px;
-    height: 12px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (min-width: 1200px) {
-  .contacts .contacts__phone .contacts__icon {
-    width: 10px;
-    height: 16px;
   }
 }
 
@@ -510,6 +490,14 @@ img {
   .contacts__icon {
     margin-right: 10px;
   }
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .contacts__link {
@@ -534,6 +522,54 @@ img {
   .contacts__link {
     padding-top: 32px;
     padding-bottom: 31px;
+  }
+}
+
+.contacts__link--mail {
+  font-size: 20px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 480px) {
+  .contacts__link--mail {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link--mail {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link--mail {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.contacts__link--phone {
+  font-size: 30px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 480px) {
+  .contacts__link--phone {
+    font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link--phone {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link--phone {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -773,6 +809,8 @@ img {
 .members__content {
   padding-top: 30px;
   padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
   background-color: #ffffff;
 }
 
@@ -1408,7 +1446,7 @@ img {
   top: 50%;
   left: 50%;
   width: calc(100% - 30px);
-  padding: 40px;
+  padding: 40px 20px;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1424,6 +1462,8 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -1585,6 +1625,12 @@ img {
           justify-content: center;
   margin-bottom: 30px;
   cursor: pointer;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-recall__field-checkbox:hover {
+  color: #2196f3;
 }
 
 .form-recall__label-checkbox {
@@ -1597,13 +1643,8 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-}
-
-@media screen and (min-width: 1200px) {
-  .form-recall__label-checkbox {
-    font-size: 14px;
-    line-height: 1.71;
-  }
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-recall__label-checkbox::before {
@@ -1617,6 +1658,13 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .form-recall__label-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .form-recall__input-checkbox:checked + .form-recall__label-checkbox::before {
   background-color: #2196f3;
   border-color: #2196f3;
@@ -1628,5 +1676,13 @@ img {
 .form-recall__aggree {
   color: #2196f3;
   margin-left: 2px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-recall__aggree {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 /*# sourceMappingURL=main.css.map */

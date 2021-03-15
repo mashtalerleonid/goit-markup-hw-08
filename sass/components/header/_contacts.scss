@@ -5,44 +5,17 @@
   color: $primary-text-color;
   letter-spacing: 0.02em;
   font-weight: 500;
-
-  @media screen and (max-width: calc(#{$tablet} - 1px)) {
-    flex-direction: column-reverse;
-    margin-bottom: 64px;
-
-    & .contacts__mail {
-      font-size: 24px;
-      line-height: 1.17;
-    }
-
-    & .contacts__phone {
-      font-size: 34px;
-      line-height: 1.18;
-    }
-  }
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+  line-height: 1.17;
 
   @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
     flex-direction: column;
-    font-size: 12px;
-    line-height: 1.17;
   }
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
-    font-size: 14px;
-    line-height: 1.14;
-
-    & .contacts__mail .contacts__icon {
-      width: 16px;
-      height: 12px;
-    }
-
-    & .contacts__phone .contacts__icon {
-      @media screen and (min-width: $desktop) {
-        width: 10px;
-        height: 16px;
-      }
-    }
   }
 }
 
@@ -69,6 +42,16 @@
 
   @media screen and (min-width: $desktop) {
     margin-right: 10px;
+
+    &--mail {
+      width: 16px;
+      height: 12px;
+    }
+
+    &--phone {
+      width: 10px;
+      height: 16px;
+    }
   }
 }
 
@@ -85,6 +68,42 @@
   @media screen and (min-width: $desktop) {
     padding-top: 32px;
     padding-bottom: 31px;
+  }
+
+  &--mail {
+    font-size: 20px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+
+  &--phone {
+    font-size: 30px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 34px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 
   transition: color $transition-type;

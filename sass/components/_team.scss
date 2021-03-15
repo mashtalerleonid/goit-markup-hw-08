@@ -40,6 +40,8 @@
 .members__content {
   padding-top: 30px;
   padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
   background-color: $white-color;
 
   @media screen and (min-width: $desktop) {
